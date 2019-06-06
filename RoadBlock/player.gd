@@ -11,6 +11,7 @@ var arriba = true
 var colision = false
 
 var move
+var hola
 
 func _ready():
 	pass
@@ -54,4 +55,4 @@ func _physics_process(delta):
 		derecha = true
 		arriba = true
 		
-	print (move)
+	print(hola)

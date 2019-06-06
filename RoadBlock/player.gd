@@ -55,4 +55,4 @@ func _physics_process(delta):
 		derecha = true
 		arriba = true
 		
-	print(hola)
+	print("Esto es release")

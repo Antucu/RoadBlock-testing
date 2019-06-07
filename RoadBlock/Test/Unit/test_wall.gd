@@ -46,7 +46,6 @@ func test_is_colision_ball_wall():
 	ball.set_speed(150)
 	ball.set_direction(Vector2(0,-1))
 
-	
 	yield(yield_for(5),YIELD)
 	assert_eq(ball.get_speed(),0)
 	

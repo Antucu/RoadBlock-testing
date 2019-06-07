@@ -19,6 +19,10 @@ config/name="roadblock remastered"
 run/main_scene="res://roadblocks_game.tscn"
 config/icon="res://icon.png"
 
+[editor_plugins]
+
+enabled=PoolStringArray( "gut" )
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

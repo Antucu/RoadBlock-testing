@@ -20,6 +20,18 @@ func test_moves_ball():
 	b.set_direction(Vector2(1,0))
 	simulate(b,1,1)
 	assert_eq(b.get_position(),Vector2(10,0))
+	
+func test_ball_controlar_teclas():
+	var ball= BallObj.instance()
+	add_child(ball)
+	ball.set_position(Vector2(150,300))
+	ball.set_speed(150)
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.is_move,false)
+	
+	remove_child(ball)
 
 func test_is_colision_ball_wall():
 	var wall=WallObj.instance()
@@ -28,21 +40,18 @@ func test_is_colision_ball_wall():
 	
 	var ball= BallObj.instance()
 	add_child(ball)
-	ball.set_position(Vector2(150,300))
+	ball.is_move=false
+	ball.set_position(Vector2(50,300))
 	
 	ball.set_speed(150)
 	ball.set_direction(Vector2(0,-1))
-	
-	var wall1=WallObj.instance()
-	add_child(wall1)
-	wall1.set_position(Vector2(100,500))
+
 	
 	yield(yield_for(5),YIELD)
 	assert_eq(ball.get_speed(),1)
 	
 	remove_child(ball)
 	remove_child(wall)
-	remove_child(wall1)
 	
 func test_controlar_collider_pared_detener():
 	var wall=WallObj.instance()
@@ -52,7 +61,14 @@ func test_controlar_collider_pared_detener():
 	var ball= BallObj.instance()
 	add_child(ball)
 	ball.set_position(Vector2(150,300))
+	ball.set_speed(150)
+	
+	var wall1=WallObj.instance()
+	add_child(wall1)
+	wall1.set_position(Vector2(100,500))
 	
 	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.get_speed(),1)
 
 

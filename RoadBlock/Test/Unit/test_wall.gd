@@ -41,14 +41,14 @@ func test_is_colision_ball_wall():
 	var ball= BallObj.instance()
 	add_child(ball)
 	ball.is_move=false
-	ball.set_position(Vector2(50,300))
+	ball.set_position(Vector2(95,300))
 	
 	ball.set_speed(150)
 	ball.set_direction(Vector2(0,-1))
 
 	
 	yield(yield_for(5),YIELD)
-	assert_eq(ball.get_speed(),1)
+	assert_eq(ball.get_speed(),0)
 	
 	remove_child(ball)
 	remove_child(wall)
@@ -60,7 +60,7 @@ func test_controlar_collider_pared_detener():
 	
 	var ball= BallObj.instance()
 	add_child(ball)
-	ball.set_position(Vector2(150,300))
+	ball.set_position(Vector2(95,300))
 	ball.set_speed(150)
 	
 	var wall1=WallObj.instance()
@@ -69,6 +69,6 @@ func test_controlar_collider_pared_detener():
 	
 	yield(yield_for(5),YIELD)
 	
-	assert_eq(ball.get_speed(),1)
+	assert_eq(ball.get_speed(),0)
 
 

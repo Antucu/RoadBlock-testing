@@ -33,7 +33,8 @@ func _process(delta):
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(1,0)
 		else:
-			_speed=1
+			is_move=true
+			_speed=0
 	if (Input.is_action_just_pressed("ui_left") && is_move):
 		_direction=Vector2(-1,0)
 		_speed=250
@@ -41,7 +42,8 @@ func _process(delta):
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(-1,0)
 		else:
-			_speed=1
+			is_move=true
+			_speed=0
 	if (Input.is_action_just_pressed("ui_up") && is_move):
 		_direction=Vector2(0,-1)
 		_speed=250
@@ -49,7 +51,8 @@ func _process(delta):
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(0,-1)
 		else:
-			_speed=1
+			is_move=true
+			_speed=0
 	if (Input.is_action_just_pressed("ui_down") && is_move):
 		_direction=Vector2(0,1)
 		_speed=250
@@ -57,4 +60,5 @@ func _process(delta):
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(0,1)
 		else:
-			_speed=1
+			is_move=true
+			_speed=0

@@ -13,7 +13,7 @@ func parar(ball):
 	pass
 
 func _on_Area2D_area_entered(area):
-	area.set_speed(1)
+	area.set_speed(0)
 	area.is_move=true
 
 

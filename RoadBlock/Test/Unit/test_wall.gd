@@ -14,14 +14,14 @@ func test_get_set_wall():			#Test ge get y set del objeto Ball
 	var p= Wall.new()
 	assert_accessors(p,"speed",0,100)
 	
-func test_moves_ball():
+func test_moves_ball():				#test para mover a la pelota
 	var b=Ball.new()
 	b.set_speed(10)
 	b.set_direction(Vector2(1,0))
 	simulate(b,1,1)
 	assert_eq(b.get_position(),Vector2(10,0))
 	
-func test_ball_controlar_teclas():
+func test_ball_controlar_teclas():	#test para restringir el movimiento
 	var ball= BallObj.instance()
 	add_child(ball)
 	ball.set_position(Vector2(150,300))
@@ -33,7 +33,7 @@ func test_ball_controlar_teclas():
 	
 	remove_child(ball)
 
-func test_is_colision_ball_wall():
+func test_is_colision_ball_wall():	#test para detener a la pelota para restringir
 	var wall=WallObj.instance()
 	add_child(wall)
 	wall.set_position(Vector2(100,100))
@@ -52,7 +52,7 @@ func test_is_colision_ball_wall():
 	remove_child(ball)
 	remove_child(wall)
 	
-func test_controlar_collider_pared_detener():
+func test_controlar_collider_pared_detener():	#test para detener el avance de la pelota
 	var wall=WallObj.instance()
 	add_child(wall)
 	wall.set_position(Vector2(100,100))

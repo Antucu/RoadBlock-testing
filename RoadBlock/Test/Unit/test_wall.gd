@@ -6,11 +6,11 @@ var Ball=load('res://Script/Ball/ball.gd')
 var WallObj=load('res://Perphaps/Wall/wall.tscn')
 var BallObj=load('res://Perphaps/Ball/ball.tscn')
 
-func test_can_wall():
+func test_can_wall():				#Esto es para ver si se creo el objeto
 	var p= Wall.new()
 	assert_not_null(p)
 	
-func test_get_set_wall():
+func test_get_set_wall():			#Test ge get y set del objeto Ball
 	var p= Wall.new()
 	assert_accessors(p,"speed",0,100)
 	

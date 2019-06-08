@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo.png-ba70bfea8a1397320d702391fbab30ab.stex"
+path="res://.import/ladrillo.png-1b2badbb2960b72ecb6c5053104faa36.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://fondo.png"
-dest_files=[ "res://.import/fondo.png-ba70bfea8a1397320d702391fbab30ab.stex" ]
+source_file="res://Assets/Sprites/ladrillo.png"
+dest_files=[ "res://.import/ladrillo.png-1b2badbb2960b72ecb6c5053104faa36.stex" ]
 
 [params]
 

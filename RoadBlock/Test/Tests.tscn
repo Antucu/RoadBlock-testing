@@ -7,8 +7,10 @@
 
 [node name="Gut" type="Control" parent="."]
 self_modulate = Color( 1, 1, 1, 0 )
-margin_right = 740.0
-margin_bottom = 250.0
+margin_left = 4.91046
+margin_top = 6.20737
+margin_right = 744.91
+margin_bottom = 256.207
 rect_min_size = Vector2( 740, 250 )
 script = ExtResource( 1 )
 __meta__ = {

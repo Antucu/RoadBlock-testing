@@ -18,6 +18,7 @@ func test_colision_ball():
 	add_child(pObj)
 	pObj.set_position(Vector2(150,100))
 	
+	
 	var bObj=BallObj.instance()
 	add_child(bObj)
 	bObj.set_position(Vector2(150,300))
@@ -25,6 +26,9 @@ func test_colision_ball():
 	yield(yield_for(5),YIELD)
 	
 	assert_eq(pObj.colision,true)
+	
+	remove_child(pObj)
+	remove_child(bObj)
 
 func test_cambio_escena():
 	var pObj= PortalObj.instance()
@@ -38,3 +42,6 @@ func test_cambio_escena():
 	yield(yield_for(5),YIELD)
 	
 	assert_eq(pObj.change,0)
+	
+	remove_child(pObj)
+	remove_child(bObj)

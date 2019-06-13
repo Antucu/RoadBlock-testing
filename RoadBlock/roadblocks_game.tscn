@@ -62,7 +62,6 @@ shape = SubResource( 2 )
 [node name="ladrillo3" type="KinematicBody2D" parent="." groups=[
 "piedra",
 ]]
-editor/display_folded = true
 position = Vector2( 427.206, -224.348 )
 
 [node name="Sprite" type="Sprite" parent="ladrillo3"]

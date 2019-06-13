@@ -1,6 +1,7 @@
 extends Area2D
 
 var _speed=0
+# warning-ignore:unused_class_variable
 var collider=false
 
 func get_speed():
@@ -9,6 +10,7 @@ func get_speed():
 func set_speed(speed):
 	_speed=speed
 	
+# warning-ignore:unused_argument
 func parar(ball):
 	pass
 

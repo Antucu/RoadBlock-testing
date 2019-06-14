@@ -71,6 +71,7 @@ func _process(delta):
 #Que intestas hacer aqui no entiendo
 func parar(ball):
 	pass
+	
 
 func _on_Area2D_area_entered(area):
 	area.set_speed(100)
@@ -79,3 +80,9 @@ func _on_Area2D_area_entered(area):
 
 func _on_Area2D_area_exited(area):
 	area.is_move=false
+
+func _on_VisibleCamera_screen_exited():
+	set_position(positionIni)
+	_speed=0
+	is_move=true
+	_vectNormal=null

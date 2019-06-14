@@ -13,7 +13,7 @@ func test_can_portal_perphaps():				#Esto es para ver si se creo el objeto
 	var pObj= PortalObj.instance()
 	assert_not_null(pObj)
 
-func test_colision_ball():
+func test_colision_ball():				#verificar que la pelota colisione
 	var pObj= PortalObj.instance()
 	add_child(pObj)
 	pObj.set_position(Vector2(150,100))
@@ -30,7 +30,7 @@ func test_colision_ball():
 	remove_child(pObj)
 	remove_child(bObj)
 
-func test_cambio_escena():
+func test_cambio_escena():				#Verificar el cambio de escena
 	var pObj= PortalObj.instance()
 	add_child(pObj)
 	pObj.set_position(Vector2(150,100))

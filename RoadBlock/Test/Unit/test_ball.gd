@@ -31,7 +31,7 @@ func test_ball_controlar_teclas():	#test para restringir el movimiento
 	
 	remove_child(ball)
 
-func test_ball_create_position():
+func test_ball_create_position():			#Verifico si hay una variable de position inicial en la clase ball
 	var ball= BallObj.instance()
 	add_child(ball)
 	ball.set_position(Vector2(150,300))
@@ -42,6 +42,38 @@ func test_ball_create_position():
 	assert_not_null(ball.positionIni)
 	
 	remove_child(ball)
+
+func test_ball_node_visible():		#verifico si hay un dono visiblee para controlar cuando se salga de la camara
+	var ball= BallObj.instance()
+	add_child(ball)
 	
-func test_ball_retry_position_xtreme():
-	pass
+	var cameravisible=ball.get_node("VisibleCamera").get_path()
+	
+	assert_not_null(cameravisible)
+	remove_child(ball)
+	
+func test_ball_retry_position_xtreme():		#Verifico si salio de la camara
+	var ball= BallObj.instance()
+	add_child(ball)
+	
+	ball.set_position(Vector2(150,200))
+	ball.set_speed(150)
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.global_position,ball.positionIni)
+	remove_child(ball)
+	
+func test_ball_retry_postion_move():		#Verifico si salio de la camara
+	var ball= BallObj.instance()
+	add_child(ball)
+	
+	ball.set_position(Vector2(150,200))
+	ball.set_speed(150)
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.is_move,true)
+	assert_eq(ball.get_vectNormal(),null)
+	
+	remove_child(ball)

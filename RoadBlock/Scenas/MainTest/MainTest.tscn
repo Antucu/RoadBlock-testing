@@ -1,39 +1,52 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Perphaps/Wall/wall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Perphaps/Puas/puas.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Perphaps/Fecha/flecha.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Script/Flecha/flecha.gd" type="Script" id=6]
+[ext_resource path="res://Perphaps/Fecha/flecha1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Perphaps/Fecha/flecha2.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Perphaps/Fecha/flecha3.tscn" type="PackedScene" id=8]
 
 [node name="GameMain_Test" type="Node2D"]
 
 [node name="Ball" parent="." instance=ExtResource( 1 )]
-position = Vector2( 517, 270 )
+position = Vector2( 500.419, 365.597 )
 
 [node name="Area2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 519, 311 )
+position = Vector2( 502.419, 406.597 )
 
 [node name="Area2D2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 809, 276 )
+position = Vector2( 792.419, 371.597 )
 
 [node name="Area2D3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 193, 277 )
+position = Vector2( 176.419, 372.597 )
 
 [node name="Area2D4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 777, 79 )
+position = Vector2( 765.694, 171.081 )
 
 [node name="Area2D5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 306.018, 103.848 )
+position = Vector2( 289.437, 199.445 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
-position = Vector2( 369.646, 405.969 )
+position = Vector2( 353.065, 501.566 )
 
 [node name="Puas" parent="." instance=ExtResource( 4 )]
-position = Vector2( 511.619, 6.36366 )
+position = Vector2( 495.038, 101.961 )
 scale = Vector2( 3.5, 3.5 )
 
 [node name="Flecha" parent="." instance=ExtResource( 5 )]
-position = Vector2( 515.12, 99.753 )
-script = ExtResource( 6 )
+position = Vector2( 503.201, 270.669 )
+
+[node name="Flecha1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 685.667, 179.323 )
+rotation = -0.00975566
+
+[node name="Flecha2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 502.523, 187.487 )
+rotation = 4.70516
+
+[node name="Flecha3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 689.522, 257.741 )
+rotation = -4.70561

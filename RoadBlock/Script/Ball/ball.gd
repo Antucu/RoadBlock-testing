@@ -5,6 +5,8 @@ var _direction=Vector2(0,0)
 var is_move=true
 var _vectNormal=Vector2(0,0)
 
+var positionIni
+
 func get_vectNormal():
 	return _vectNormal
 	
@@ -22,6 +24,9 @@ func get_direction():
 	
 func set_direction(direction):
 	_direction=direction
+	
+func _ready():
+	positionIni=get_position()
 
 func _process(delta):
 	var new_pos=_speed*_direction*delta

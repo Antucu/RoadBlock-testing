@@ -9,29 +9,14 @@ var BallObj=load('res://Perphaps/Ball/ball.tscn')	#Creo el objeto Ball
 func test_can_wall():				#Esto es para ver si se creo el objeto
 	var p= Wall.new()
 	assert_not_null(p)
+
+func test_can_perphaps_wall():
+	var pObj= WallObj.instance()
+	assert_not_null(pObj)
 	
 func test_get_set_wall():			#Test ge get y set del objeto Ball
 	var p= Wall.new()
 	assert_accessors(p,"speed",0,100)
-	
-func test_moves_ball():				#test para mover a la pelota
-	var b=Ball.new()
-	b.set_speed(10)
-	b.set_direction(Vector2(1,0))
-	simulate(b,1,1)
-	assert_eq(b.get_position(),Vector2(10,0))
-	
-func test_ball_controlar_teclas():	#test para restringir el movimiento
-	var ball= BallObj.instance()
-	add_child(ball)
-	ball.set_position(Vector2(150,300))
-	ball.set_speed(150)
-	
-	yield(yield_for(5),YIELD)
-	
-	assert_eq(ball.is_move,false)
-	
-	remove_child(ball)
 
 func test_is_colision_ball_wall():	#test para detener a la pelota para restringir
 	var wall=WallObj.instance()

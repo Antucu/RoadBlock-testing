@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ladrillo.png-389bfac3b9a35d19f1b7a8317bbe6237.stex"
+path="res://.import/icon.png-91b084043b8aaf2f1c906e7b9fa92969.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ladrillo.png"
-dest_files=[ "res://.import/ladrillo.png-389bfac3b9a35d19f1b7a8317bbe6237.stex" ]
+source_file="res://addons/gut/icon.png"
+dest_files=[ "res://.import/icon.png-91b084043b8aaf2f1c906e7b9fa92969.stex" ]
 
 [params]
 

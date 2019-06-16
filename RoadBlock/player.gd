@@ -45,7 +45,7 @@ func get_input():
 
 func _physics_process(delta):
 	get_input()
-	move=move_and_slide(motion*delta,Vector2(0, -1), 5, 4, deg2rad(180))
+	move_and_slide(motion*delta,Vector2(0, -1), 5, 4, deg2rad(180))
 	position.x=position.x+velocidadx
 	position.y=position.y+velocidady
 	colision = is_on_floor()
@@ -55,4 +55,4 @@ func _physics_process(delta):
 		derecha = true
 		arriba = true
 		
-	print("Esto es release")
+		

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player.gd" type="Script" id=1]
-[ext_resource path="res://pelota.png" type="Texture" id=2]
-[ext_resource path="res://ladrillo.png" type="Texture" id=3]
-[ext_resource path="res://portal1.png" type="Texture" id=4]
-[ext_resource path="res://fondo.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/pelota.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/ladrillo.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/portal1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 14.4478, 13.8521 )
@@ -16,6 +16,7 @@ extents = Vector2( 20.864, 20.9469 )
 extents = Vector2( 34.0757, 28.408 )
 
 [node name="roadblocks_game" type="Node2D"]
+editor/display_folded = true
 position = Vector2( 196.14, 131.113 )
 
 [node name="player" type="KinematicBody2D" parent="."]
@@ -28,13 +29,12 @@ scale = Vector2( 0.0347833, 0.0332857 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
-position = Vector2( 527.999, 291.593 )
+position = Vector2( 528.999, 297.593 )
 shape = SubResource( 1 )
 
 [node name="ladrillo1" type="KinematicBody2D" parent="." groups=[
 "piedra",
 ]]
-editor/display_folded = true
 position = Vector2( 171.587, 38.2396 )
 
 [node name="Sprite" type="Sprite" parent="ladrillo1"]
@@ -49,7 +49,6 @@ shape = SubResource( 2 )
 [node name="ladrillo2" type="KinematicBody2D" parent="." groups=[
 "piedra",
 ]]
-editor/display_folded = true
 position = Vector2( 462.399, -0.224289 )
 
 [node name="Sprite" type="Sprite" parent="ladrillo2"]
@@ -64,7 +63,6 @@ shape = SubResource( 2 )
 [node name="ladrillo3" type="KinematicBody2D" parent="." groups=[
 "piedra",
 ]]
-editor/display_folded = true
 position = Vector2( 427.206, -224.348 )
 
 [node name="Sprite" type="Sprite" parent="ladrillo3"]

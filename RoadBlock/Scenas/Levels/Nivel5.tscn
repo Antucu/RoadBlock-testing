@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/tilemapRoadBlock.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=2]
+
+[node name="Nivel5" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131072, 4, 0, 65534, 3, 0, 4, 3, 0, 10, 3, 0, 16, 3, 0, 22, 3, 0, 28, 3, 0, 31, 5, 0, 262144, 4, 0, 327711, 5, 0, 393235, 10, 0, 655360, 4, 0, 655373, 10, 0, 655391, 5, 0, 851987, 7, 0, 983071, 5, 0, 1048576, 4, 0, 1245183, 2, 0, 1179653, 2, 0, 1179659, 2, 0, 1179665, 2, 0, 1179671, 2, 0, 1179677, 2, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 594.166, 510.48 )
+texture = ExtResource( 2 )

@@ -16,7 +16,6 @@ extents = Vector2( 20.864, 20.9469 )
 extents = Vector2( 34.0757, 28.408 )
 
 [node name="roadblocks_game" type="Node2D"]
-editor/display_folded = true
 position = Vector2( 196.14, 131.113 )
 
 [node name="player" type="KinematicBody2D" parent="."]

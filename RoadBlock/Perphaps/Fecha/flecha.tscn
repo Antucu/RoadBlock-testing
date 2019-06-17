@@ -8,6 +8,7 @@ extents = Vector2( 15.2964, 1.75182 )
 
 [node name="Flecha" type="Area2D"]
 script = ExtResource( 1 )
+_directionFlecha = 2
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.0610654, -1.50207 )

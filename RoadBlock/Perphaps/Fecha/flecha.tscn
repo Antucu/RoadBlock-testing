@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Script/Flecha/flecha.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/arrow.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15.2964, 1.75182 )
+
+[node name="Flecha" type="Area2D"]
+script = ExtResource( 1 )
+_directionFlecha = 2
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.0610654, -1.50207 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1.41323, -4.4407 )
+shape = SubResource( 1 )
+[connection signal="area_entered" from="." to="." method="_on_Flecha_area_entered"]

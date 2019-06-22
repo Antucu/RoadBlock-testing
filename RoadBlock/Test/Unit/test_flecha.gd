@@ -94,7 +94,6 @@ func test_habilitar_movimientopelota():				#verificar que la pelota tenga habili
 	var bObj=pelotaobj.instance()
 	add_child(bObj)
 	bObj.set_position(Vector2(150,300))
-	var direcBall=bObj.get_direction()
 	
 	var pObj=WallObj.instance()
 	add_child(pObj)
@@ -102,6 +101,31 @@ func test_habilitar_movimientopelota():				#verificar que la pelota tenga habili
 	
 	yield(yield_for(5),YIELD)
 	
+	assert_eq(bObj.is_move,true)
+	
+	remove_child(pObj)
+	remove_child(fObj)
+	remove_child(bObj)
+	
+func test_cambiar_normal():				#verificar que la pelota tenga habilitado el movimiento
+	var fObj= fechaobj.instance()
+	add_child(fObj)
+	fObj.set_position(Vector2(150,100))
+	fObj.set_directionFlecha(2);
+	
+	var bObj=pelotaobj.instance()
+	add_child(bObj)
+	bObj.set_position(Vector2(150,300))
+	
+	var pObj=WallObj.instance()
+	add_child(pObj)
+	pObj.set_position(Vector2(400,100))
+	
+	var normal=bObj.get_vectNormal()
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(bObj.get_vectNormal(),normal)
 	remove_child(pObj)
 	remove_child(fObj)
 	remove_child(bObj)

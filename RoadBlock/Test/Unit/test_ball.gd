@@ -6,6 +6,8 @@ var BallObj=load('res://Perphaps/Ball/ball.tscn')	#Creo el objeto Ball
 
 func test_can_portal_class():				#Esto es para ver si se creo el objeto
 	var b= Ball.new()
+	var curretn =get_tree().get_current_scene()
+	b.set_scene_file(curretn)
 	assert_not_null(b)
 
 func test_can_portal_perphaps():				#Esto es para ver si se creo el objeto

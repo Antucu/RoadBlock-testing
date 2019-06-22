@@ -1,32 +1,19 @@
 extends Area2D
 
+export(PackedScene) var _scene_file=null
+var scena_file_main_test=null
+
 var _speed=0
 var _direction=Vector2(0,0)
 var is_move=true
 var _vectNormal=Vector2(0,0)
 
 var positionIni
-
-func get_vectNormal():
-	return _vectNormal
-	
-func set_vectNormal(normal):
-	_vectNormal=normal
-	
-func get_speed():
-	return _speed
-	
-func set_speed(speed):
-	_speed=speed
-
-func get_direction():
-	return _direction
-	
-func set_direction(direction):
-	_direction=direction
 	
 func _ready():
 	positionIni=get_position()
+	if (scena_file_main_test!=null):			#esto es para hacer la prueba de cambio de escena no la borres
+		get_tree().change_scene_to(scena_file_main_test)
 
 func _process(delta):
 	var new_pos=_speed*_direction*delta
@@ -67,12 +54,7 @@ func _process(delta):
 		else:
 			is_move=true
 			_speed=0
-
-#Que intestas hacer aqui no entiendo
-func parar(ball):
-	pass
 	
-
 func _on_Area2D_area_entered(area):
 	area.set_speed(100)
 	area.is_move=true
@@ -86,3 +68,27 @@ func _on_VisibleCamera_screen_exited():
 	_speed=0
 	is_move=true
 	_vectNormal=null
+
+func get_vectNormal():
+	return _vectNormal
+	
+func set_vectNormal(normal):
+	_vectNormal=normal
+	
+func get_speed():
+	return _speed
+	
+func set_speed(speed):
+	_speed=speed
+
+func get_direction():
+	return _direction
+	
+func set_direction(direction):
+	_direction=direction
+	
+func get_scene_file():
+	return _scene_file
+	
+func set_scene_file(scena):
+	_scene_file=scena

@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Script/Wall/wall.gd" type="Script" id=1]
-[ext_resource path="res://Assets/NuevosSprites/ladrillo2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/NuevosSprites/ladrillo3.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Musica/Effects/colision-madera.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.0953, 16.0668 )
+extents = Vector2( 16.0953, 15.9312 )
 
-[node name="Ladrillo1" type="Area2D" groups=[
+[node name="Ladrillo2" type="Area2D" groups=[
 "animated",
 ]]
 script = ExtResource( 1 )

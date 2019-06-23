@@ -1,14 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
-[ext_resource path="res://Assets/NuevosSprites/ladrillo2.png" type="Texture" id=2]
-[ext_resource path="res://Assets/NuevosSprites/portal1.png" type="Texture" id=3]
-[ext_resource path="res://Assets/NuevosSprites/puas1.png" type="Texture" id=4]
-[ext_resource path="res://Assets/NuevosSprites/puas2.png" type="Texture" id=5]
-[ext_resource path="res://Assets/NuevosSprites/puas3.png" type="Texture" id=6]
-[ext_resource path="res://Assets/NuevosSprites/puas4.png" type="Texture" id=7]
+[ext_resource path="res://Perphaps/Wall/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Musica/Soundtracks/level3.ogg" type="AudioStream" id=6]
 
 [node name="lvl3" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 176.078, 340.259, 275.557 ],
+"_edit_vertical_guides_": [ 329.147, 438.821, 294.883, 635.535, 478.779 ]
+}
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -20,162 +23,71 @@ scale = Vector2( 1.02486, 1.09491 )
 texture = ExtResource( 1 )
 offset = Vector2( -250.714, 105.403 )
 
-[node name="ladrillo2" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -297.093, -40.4139 )
-texture = ExtResource( 2 )
+[node name="Ladrillo1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 311.205, 468.414 )
 
-[node name="ladrillo5" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -144.593, -76.6324 )
-texture = ExtResource( 2 )
+[node name="Ladrillo2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 311.205, 432.246 )
 
-[node name="ladrillo6" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -111.589, -76.6324 )
-texture = ExtResource( 2 )
+[node name="Ladrillo3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.091, 356.381 )
 
-[node name="ladrillo7" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -78.5855, -75.5671 )
-texture = ExtResource( 2 )
+[node name="Ladrillo14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 618.522, 356.681 )
 
-[node name="ladrillo8" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -72.8952, 33.0882 )
-texture = ExtResource( 2 )
+[node name="Ladrillo4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.091, 323.605 )
 
-[node name="ladrillo9" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -72.8952, 95.9378 )
-texture = ExtResource( 2 )
+[node name="Ladrillo12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.994, 323.906 )
 
-[node name="ladrillo11" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -72.8952, 126.83 )
-texture = ExtResource( 2 )
+[node name="Ladrillo5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.397, 291.46 )
 
-[node name="ladrillo12" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -105.899, 126.83 )
-texture = ExtResource( 2 )
+[node name="Ladrillo11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.994, 291.76 )
 
-[node name="ladrillo13" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -412.037, 23.5009 )
-texture = ExtResource( 2 )
+[node name="Ladrillo6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.703, 259.314 )
 
-[node name="ladrillo14" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -445.04, 56.5237 )
-texture = ExtResource( 2 )
+[node name="Ladrillo15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.994, 259.614 )
 
-[node name="ladrillo15" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -445.04, 85.2853 )
-texture = ExtResource( 2 )
+[node name="Ladrillo7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 310.899, 259.62 )
 
-[node name="ladrillo17" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -445.04, 119.373 )
-texture = ExtResource( 2 )
+[node name="Ladrillo13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.329, 356.681 )
 
-[node name="ladrillo18" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -404.07, 193.941 )
-texture = ExtResource( 2 )
+[node name="Ladrillo8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 421.419, 259.008 )
 
-[node name="ladrillo19" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -405.208, 226.963 )
-texture = ExtResource( 2 )
+[node name="Ladrillo16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 618.346, 159.735 )
 
-[node name="ladrillo16" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -445.04, 24.5661 )
-texture = ExtResource( 2 )
+[node name="Ladrillo9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 421.419, 226.106 )
 
-[node name="ladrillo10" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -72.8952, 63.9804 )
-texture = ExtResource( 2 )
+[node name="Ladrillo18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 650.906, 159.735 )
 
-[node name="ladrillo3" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -297.093, 21.3704 )
-texture = ExtResource( 2 )
+[node name="Ladrillo10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 421.419, 192.88 )
 
-[node name="ladrillo4" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -297.093, -8.4565 )
-texture = ExtResource( 2 )
+[node name="Ladrillo17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 585.806, 159.735 )
 
-[node name="portal1" type="Sprite" parent="ParallaxBackground/ParallaxLayer/Sprite"]
-position = Vector2( -260.675, -110.72 )
-texture = ExtResource( 3 )
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 454.788, 98.124 )
+rotation = 1.5708
 
-[node name="puas1" type="Sprite" parent="."]
-position = Vector2( 60, 590 )
-texture = ExtResource( 4 )
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 501.844, 322.36 )
+_anim = NodePath("../Animaciones")
 
-[node name="puas12" type="Sprite" parent="."]
-position = Vector2( 250, 590 )
-texture = ExtResource( 4 )
+[node name="Animaciones" parent="." instance=ExtResource( 5 )]
 
-[node name="puas13" type="Sprite" parent="."]
-position = Vector2( 440, 590 )
-texture = ExtResource( 4 )
-
-[node name="puas14" type="Sprite" parent="."]
-position = Vector2( 630, 590 )
-texture = ExtResource( 4 )
-
-[node name="puas15" type="Sprite" parent="."]
-position = Vector2( 820, 590 )
-texture = ExtResource( 4 )
-
-[node name="puas16" type="Sprite" parent="."]
-position = Vector2( 1010, 590 )
-texture = ExtResource( 4 )
-
-[node name="puas2" type="Sprite" parent="."]
-position = Vector2( 170, 270 )
-texture = ExtResource( 5 )
-offset = Vector2( -152.243, -175.469 )
-
-[node name="puas5" type="Sprite" parent="."]
-position = Vector2( 170, 460 )
-texture = ExtResource( 5 )
-offset = Vector2( -152.243, -175.469 )
-
-[node name="puas10" type="Sprite" parent="."]
-position = Vector2( 170, 650 )
-texture = ExtResource( 5 )
-offset = Vector2( -152.243, -175.469 )
-
-[node name="puas11" type="Sprite" parent="."]
-position = Vector2( 170, 840 )
-texture = ExtResource( 5 )
-offset = Vector2( -152.243, -175.469 )
-
-[node name="puas3" type="Sprite" parent="."]
-position = Vector2( 100, 10 )
-texture = ExtResource( 6 )
-
-[node name="puas6" type="Sprite" parent="."]
-position = Vector2( 290, 10 )
-texture = ExtResource( 6 )
-
-[node name="puas7" type="Sprite" parent="."]
-position = Vector2( 480, 10 )
-texture = ExtResource( 6 )
-
-[node name="puas8" type="Sprite" parent="."]
-position = Vector2( 670, 10 )
-texture = ExtResource( 6 )
-
-[node name="puas9" type="Sprite" parent="."]
-position = Vector2( 860, 10 )
-texture = ExtResource( 6 )
-
-[node name="puas17" type="Sprite" parent="."]
-position = Vector2( 1050, 10 )
-texture = ExtResource( 6 )
-
-[node name="puas4" type="Sprite" parent="."]
-position = Vector2( 1010, 10 )
-texture = ExtResource( 7 )
-
-[node name="puas18" type="Sprite" parent="."]
-position = Vector2( 1010, 200 )
-texture = ExtResource( 7 )
-
-[node name="puas19" type="Sprite" parent="."]
-position = Vector2( 1010, 390 )
-texture = ExtResource( 7 )
-
-[node name="puas20" type="Sprite" parent="."]
-position = Vector2( 1010, 580 )
-texture = ExtResource( 7 )
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -17.0
+autoplay = true

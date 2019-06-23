@@ -33,12 +33,14 @@ func _on_AreaCuerpo_area_entered(area):
 			var nodeAnim=get_node(area.get_anim())
 			nodeAnim.is_animate=true
 			get_node("AudioStreamPlayer").play()
+			area.set_scale(Vector2(1,1))
 
 func _on_Extremo_area_entered(area):
 	colision=true
 	if (area.is_in_group ("ball")):
 		area.set_speed(0)
 		area.is_move=true
+		area.set_scale(Vector2(1,1))
 
 func _on_Extremo_area_exited(area):
 	if (area.is_in_group ("ball") ):

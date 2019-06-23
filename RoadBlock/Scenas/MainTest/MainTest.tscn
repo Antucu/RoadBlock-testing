@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Perphaps/Wall/wall.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Perphaps/Fecha/flecha.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Perphaps/Portal/PortalApoyo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=8]
 
 [node name="GameMain_Test" type="Node2D"]
 
@@ -50,3 +51,5 @@ position = Vector2( 70.8491, 195.767 )
 _portalPuente = NodePath("../PortalApoyo")
 
 [node name="Animaciones" parent="." instance=ExtResource( 7 )]
+
+[node name="Node" parent="." instance=ExtResource( 8 )]

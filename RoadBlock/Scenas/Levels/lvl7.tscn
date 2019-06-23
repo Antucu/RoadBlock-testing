@@ -137,7 +137,7 @@ position = Vector2( 911.92, 239.794 )
 position = Vector2( 847.279, 111.964 )
 
 [node name="Ladrillo28" parent="." instance=ExtResource( 4 )]
-position = Vector2( 784.384, 79.6172 )
+position = Vector2( 752.785, 79.6172 )
 
 [node name="Portal" parent="." instance=ExtResource( 5 )]
 position = Vector2( 529.511, 79.7978 )

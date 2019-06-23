@@ -1,0 +1,510 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Musica/Soundtracks/level7.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Perphaps/Wall/ladrilloCajon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Perphaps/Portal/PortalApoyo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=8]
+
+[node name="lvl8" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 31.9916, 160.086, 255.947, 320.007, 351.852, 384.029, 512.001, 543.97, 416.019, 447.987, 575.99, 192.013 ],
+"_edit_vertical_guides_": [ 128.099, 160.075, 63.9492, 608.04, 512.036, 863.99, 831.986, 800.096, 416.074, 224.025, 672.723, 288.234 ]
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 93.2746, 389.84 )
+texture = ExtResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -8.0
+autoplay = true
+
+[node name="Ladrillo2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.317, 47.9033 )
+
+[node name="Ladrillo140" parent="." instance=ExtResource( 3 )]
+position = Vector2( 175.919, 48.0018 )
+
+[node name="Ladrillo141" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.628, 48.0018 )
+
+[node name="Ladrillo142" parent="." instance=ExtResource( 3 )]
+position = Vector2( 303.529, 48.1948 )
+
+[node name="Ladrillo143" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.435, 144.144 )
+
+[node name="Ladrillo144" parent="." instance=ExtResource( 3 )]
+position = Vector2( 175.919, 143.758 )
+
+[node name="Ladrillo145" parent="." instance=ExtResource( 3 )]
+position = Vector2( 175.623, 208.045 )
+
+[node name="Ladrillo146" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.314, 271.736 )
+
+[node name="Ladrillo147" parent="." instance=ExtResource( 3 )]
+position = Vector2( 495.191, 335.978 )
+
+[node name="Ladrillo148" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559.16, 272.008 )
+
+[node name="Ladrillo149" parent="." instance=ExtResource( 3 )]
+position = Vector2( 816.192, 240.149 )
+
+[node name="Ladrillo150" parent="." instance=ExtResource( 3 )]
+position = Vector2( 815.362, 47.893 )
+
+[node name="Ladrillo151" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559.129, 143.634 )
+
+[node name="Ladrillo152" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559.465, 495.072 )
+
+[node name="Ladrillo153" parent="." instance=ExtResource( 3 )]
+position = Vector2( 462.96, 495.525 )
+
+[node name="Ladrillo154" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559.012, 592.03 )
+
+[node name="Ladrillo155" parent="." instance=ExtResource( 3 )]
+position = Vector2( 463.553, 592.03 )
+
+[node name="Ladrillo100" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.412, 367.661 )
+
+[node name="Ladrillo14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.617, 47.9282 )
+
+[node name="Ladrillo8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.597, 47.9033 )
+
+[node name="Ladrillo102" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.6926, 367.661 )
+
+[node name="Ladrillo16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.897, 47.9282 )
+
+[node name="Ladrillo3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.317, 79.6868 )
+
+[node name="Ladrillo99" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.412, 399.444 )
+
+[node name="Ladrillo13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.617, 79.7118 )
+
+[node name="Ladrillo7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.597, 79.6868 )
+
+[node name="Ladrillo97" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.6926, 399.444 )
+
+[node name="Ladrillo11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.897, 79.7118 )
+
+[node name="Ladrillo4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.317, 111.706 )
+
+[node name="Ladrillo98" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.412, 431.463 )
+
+[node name="Ladrillo12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.617, 111.731 )
+
+[node name="Ladrillo6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.597, 111.706 )
+
+[node name="Ladrillo96" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.6926, 431.463 )
+
+[node name="Ladrillo10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.897, 111.731 )
+
+[node name="Ladrillo5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.37, 143.89 )
+
+[node name="Ladrillo101" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.4, 208.013 )
+
+[node name="Ladrillo110" parent="." instance=ExtResource( 3 )]
+position = Vector2( 750.654, 48.1819 )
+
+[node name="Ladrillo113" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.607, 272.048 )
+
+[node name="Ladrillo114" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.607, 303.78 )
+
+[node name="Ladrillo117" parent="." instance=ExtResource( 3 )]
+position = Vector2( 399.443, 271.967 )
+
+[node name="Ladrillo119" parent="." instance=ExtResource( 3 )]
+position = Vector2( 399.294, 399.992 )
+
+[node name="Ladrillo104" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.465, 591.633 )
+
+[node name="Ladrillo106" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.586, 528.174 )
+
+[node name="Ladrillo109" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.465, 495.929 )
+
+[node name="Ladrillo15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.67, 143.915 )
+
+[node name="Ladrillo9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.597, 143.89 )
+
+[node name="Ladrillo103" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.6275, 208.013 )
+
+[node name="Ladrillo111" parent="." instance=ExtResource( 3 )]
+position = Vector2( 718.881, 48.1819 )
+
+[node name="Ladrillo112" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.834, 272.048 )
+
+[node name="Ladrillo115" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.834, 303.78 )
+
+[node name="Ladrillo116" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.67, 271.967 )
+
+[node name="Ladrillo118" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.522, 399.992 )
+
+[node name="Ladrillo105" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.6926, 591.633 )
+
+[node name="Ladrillo107" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.4516, 527.933 )
+
+[node name="Ladrillo108" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.6926, 495.929 )
+
+[node name="Ladrillo17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.897, 143.915 )
+
+[node name="Ladrillo18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 143.336, 271.844 )
+
+[node name="Ladrillo28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 591.337, 47.9888 )
+
+[node name="Ladrillo30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.401, 112.172 )
+
+[node name="Ladrillo57" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.267, 463.839 )
+
+[node name="Ladrillo64" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.475, 559.981 )
+
+[node name="Ladrillo66" parent="." instance=ExtResource( 3 )]
+position = Vector2( 783.387, 495.805 )
+
+[node name="Ladrillo39" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.397, 272.073 )
+
+[node name="Ladrillo43" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.555, 48.1231 )
+
+[node name="Ladrillo45" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.888, 239.48 )
+
+[node name="Ladrillo49" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.221, 367.879 )
+
+[node name="Ladrillo51" parent="." instance=ExtResource( 3 )]
+position = Vector2( 815.256, 367.903 )
+
+[node name="Ladrillo73" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.345, 431.966 )
+
+[node name="Ladrillo77" parent="." instance=ExtResource( 3 )]
+position = Vector2( 783.435, 463.922 )
+
+[node name="Ladrillo80" parent="." instance=ExtResource( 3 )]
+position = Vector2( 783.408, 591.989 )
+
+[node name="Ladrillo81" parent="." instance=ExtResource( 3 )]
+position = Vector2( 687.288, 591.939 )
+
+[node name="Ladrillo86" parent="." instance=ExtResource( 3 )]
+position = Vector2( 687.65, 495.908 )
+
+[node name="Ladrillo89" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.387, 591.961 )
+
+[node name="Ladrillo92" parent="." instance=ExtResource( 3 )]
+position = Vector2( 399.151, 143.96 )
+
+[node name="Ladrillo95" parent="." instance=ExtResource( 3 )]
+position = Vector2( 399.342, 48.0517 )
+
+[node name="Ladrillo22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 143.336, 303.944 )
+
+[node name="Ladrillo24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 591.337, 80.0893 )
+
+[node name="Ladrillo35" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.401, 144.272 )
+
+[node name="Ladrillo59" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.267, 495.939 )
+
+[node name="Ladrillo60" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.475, 592.082 )
+
+[node name="Ladrillo69" parent="." instance=ExtResource( 3 )]
+position = Vector2( 783.387, 527.906 )
+
+[node name="Ladrillo41" parent="." instance=ExtResource( 3 )]
+position = Vector2( 943.397, 304.174 )
+
+[node name="Ladrillo19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.819, 271.791 )
+
+[node name="Ladrillo29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559.82, 47.9365 )
+
+[node name="Ladrillo34" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.884, 112.119 )
+
+[node name="Ladrillo56" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.75, 463.786 )
+
+[node name="Ladrillo63" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.958, 559.929 )
+
+[node name="Ladrillo68" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.87, 495.753 )
+
+[node name="Ladrillo38" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.88, 272.021 )
+
+[node name="Ladrillo42" parent="." instance=ExtResource( 3 )]
+position = Vector2( 912.038, 48.0707 )
+
+[node name="Ladrillo47" parent="." instance=ExtResource( 3 )]
+position = Vector2( 912.371, 239.427 )
+
+[node name="Ladrillo48" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.704, 367.827 )
+
+[node name="Ladrillo53" parent="." instance=ExtResource( 3 )]
+position = Vector2( 783.739, 367.85 )
+
+[node name="Ladrillo72" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.828, 431.913 )
+
+[node name="Ladrillo75" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.918, 463.869 )
+
+[node name="Ladrillo78" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.891, 591.937 )
+
+[node name="Ladrillo83" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.771, 591.886 )
+
+[node name="Ladrillo84" parent="." instance=ExtResource( 3 )]
+position = Vector2( 656.133, 495.856 )
+
+[node name="Ladrillo87" parent="." instance=ExtResource( 3 )]
+position = Vector2( 207.87, 591.909 )
+
+[node name="Ladrillo90" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.633, 143.908 )
+
+[node name="Ladrillo94" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.825, 47.9992 )
+
+[node name="Ladrillo23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 111.819, 303.944 )
+
+[node name="Ladrillo26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 559.82, 80.0893 )
+
+[node name="Ladrillo32" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.884, 144.272 )
+
+[node name="Ladrillo55" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.75, 495.939 )
+
+[node name="Ladrillo62" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.958, 592.082 )
+
+[node name="Ladrillo70" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.87, 527.906 )
+
+[node name="Ladrillo37" parent="." instance=ExtResource( 3 )]
+position = Vector2( 911.88, 304.174 )
+
+[node name="Ladrillo20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.5515, 271.892 )
+
+[node name="Ladrillo25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 527.553, 48.0372 )
+
+[node name="Ladrillo31" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.617, 112.22 )
+
+[node name="Ladrillo58" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.483, 463.887 )
+
+[node name="Ladrillo65" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.691, 560.03 )
+
+[node name="Ladrillo120" parent="." instance=ExtResource( 3 )]
+position = Vector2( 847.728, 560.235 )
+
+[node name="Ladrillo122" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.401, 560.235 )
+
+[node name="Ladrillo125" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.166, 495.948 )
+
+[node name="Ladrillo127" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.423, 495.948 )
+
+[node name="Ladrillo128" parent="." instance=ExtResource( 3 )]
+position = Vector2( 175.905, 495.803 )
+
+[node name="Ladrillo130" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.504, 367.655 )
+
+[node name="Ladrillo133" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.55, 272.042 )
+
+[node name="Ladrillo134" parent="." instance=ExtResource( 3 )]
+position = Vector2( 815.476, 271.823 )
+
+[node name="Ladrillo136" parent="." instance=ExtResource( 3 )]
+position = Vector2( 815.476, 111.807 )
+
+[node name="Ladrillo138" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.439, 112.007 )
+
+[node name="Ladrillo67" parent="." instance=ExtResource( 3 )]
+position = Vector2( 719.603, 495.854 )
+
+[node name="Ladrillo40" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.613, 272.122 )
+
+[node name="Ladrillo44" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.771, 48.1714 )
+
+[node name="Ladrillo46" parent="." instance=ExtResource( 3 )]
+position = Vector2( 880.104, 239.528 )
+
+[node name="Ladrillo50" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.437, 367.928 )
+
+[node name="Ladrillo52" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.472, 367.951 )
+
+[node name="Ladrillo74" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.561, 432.014 )
+
+[node name="Ladrillo76" parent="." instance=ExtResource( 3 )]
+position = Vector2( 719.651, 463.97 )
+
+[node name="Ladrillo79" parent="." instance=ExtResource( 3 )]
+position = Vector2( 719.624, 592.037 )
+
+[node name="Ladrillo82" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.504, 591.987 )
+
+[node name="Ladrillo85" parent="." instance=ExtResource( 3 )]
+position = Vector2( 623.866, 495.957 )
+
+[node name="Ladrillo88" parent="." instance=ExtResource( 3 )]
+position = Vector2( 175.603, 592.01 )
+
+[node name="Ladrillo91" parent="." instance=ExtResource( 3 )]
+position = Vector2( 335.366, 144.009 )
+
+[node name="Ladrillo93" parent="." instance=ExtResource( 3 )]
+position = Vector2( 335.558, 48.1 )
+
+[node name="Ladrillo21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 79.5515, 303.944 )
+
+[node name="Ladrillo27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 527.553, 80.0893 )
+
+[node name="Ladrillo33" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.617, 144.272 )
+
+[node name="Ladrillo54" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.483, 495.939 )
+
+[node name="Ladrillo61" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.691, 592.082 )
+
+[node name="Ladrillo121" parent="." instance=ExtResource( 3 )]
+position = Vector2( 847.728, 592.287 )
+
+[node name="Ladrillo123" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.401, 592.287 )
+
+[node name="Ladrillo124" parent="." instance=ExtResource( 3 )]
+position = Vector2( 367.166, 528 )
+
+[node name="Ladrillo126" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.423, 528 )
+
+[node name="Ladrillo129" parent="." instance=ExtResource( 3 )]
+position = Vector2( 175.905, 527.855 )
+
+[node name="Ladrillo131" parent="." instance=ExtResource( 3 )]
+position = Vector2( 239.504, 399.707 )
+
+[node name="Ladrillo132" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.55, 304.094 )
+
+[node name="Ladrillo135" parent="." instance=ExtResource( 3 )]
+position = Vector2( 815.476, 303.875 )
+
+[node name="Ladrillo137" parent="." instance=ExtResource( 3 )]
+position = Vector2( 815.476, 143.859 )
+
+[node name="Ladrillo139" parent="." instance=ExtResource( 3 )]
+position = Vector2( 751.439, 144.059 )
+
+[node name="Ladrillo71" parent="." instance=ExtResource( 3 )]
+position = Vector2( 719.603, 527.906 )
+
+[node name="Ladrillo36" parent="." instance=ExtResource( 3 )]
+position = Vector2( 879.613, 304.174 )
+
+[node name="PortalApoyo" parent="." instance=ExtResource( 4 )]
+position = Vector2( 688.056, 208.139 )
+_portalPuente = NodePath("../PortalApoyo2")
+
+[node name="PortalApoyo2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 496.06, 528.114 )
+_portalPuente = NodePath("../PortalApoyo")
+
+[node name="Ball" parent="." instance=ExtResource( 5 )]
+position = Vector2( 303.183, 207.219 )
+_anim = NodePath("../../lvl8/Animaciones")
+
+[node name="Portal" parent="." instance=ExtResource( 6 )]
+position = Vector2( 463.928, 433.497 )
+
+[node name="Animaciones" parent="." instance=ExtResource( 7 )]
+
+[node name="Node" parent="." instance=ExtResource( 8 )]

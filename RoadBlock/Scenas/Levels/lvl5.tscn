@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
 [ext_resource path="res://Perphaps/Portal/PortalApoyo.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Musica/Soundtracks/level5.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=7]
 
 [node name="lvl5" type="Node2D"]
 __meta__ = {
@@ -44,3 +45,5 @@ _anim = NodePath("../Animaciones")
 stream = ExtResource( 6 )
 volume_db = -17.0
 autoplay = true
+
+[node name="Node" parent="." instance=ExtResource( 7 )]

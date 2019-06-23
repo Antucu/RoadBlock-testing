@@ -38,14 +38,11 @@ func _on_Area2D_area_entered(area):
 			vecNormalOut=area.get_vectNormal()
 		else:
 			vecNormalIn=null
-		print(get_path(), " Entra ",vecNormalIn)
-
 
 func _on_Area2D_area_exited(area):
 	if (area.is_in_group ("ball") ):
 		if (vecNormalOut!=area.get_vectNormal()):
 			area.is_move=false
-			print (get_path(), " Sale")
 		else:
 			if (area.get_direction()==Vector2(1,0)):
 				area.position.x=position.x-30

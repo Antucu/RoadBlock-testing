@@ -4,6 +4,8 @@ var colision=false
 
 export(PackedScene) var _scena_file=null
 export(NodePath) var _anim=null
+var vecNormalIn=null
+var vecNormalOut=null
 
 func _ready():
 	print (_anim)
@@ -37,11 +39,35 @@ func _on_AreaCuerpo_area_entered(area):
 
 func _on_Extremo_area_entered(area):
 	colision=true
-	if (area.is_in_group ("ball")):
-		area.set_speed(0)
-		area.is_move=true
-		area.set_scale(Vector2(1,1))
+	if (area.is_in_group ("ball") ):
+		if (vecNormalIn==null or area.get_vectNormal()==vecNormalIn ):
+			area.set_speed(0)
+			area.is_move=true
+			area.set_scale(Vector2(1,1))
+			if (area.get_direction()==Vector2(1,0)):
+				area.position.x=position.x-30
+			if (area.get_direction()==Vector2(-1,0)):
+				area.position.x=position.x+30
+			if (area.get_direction()==Vector2(0,1)):
+				area.position.y=position.y-30
+			if (area.get_direction()==Vector2(0,-1)):
+				area.position.y=position.y+30
+			
+			vecNormalIn=area.get_vectNormal()
+			vecNormalOut=area.get_vectNormal()
+		else:
+			vecNormalIn=null
 
 func _on_Extremo_area_exited(area):
 	if (area.is_in_group ("ball") ):
-		area.is_move=false
+		if (vecNormalOut!=area.get_vectNormal()):
+			area.is_move=false
+		else:
+			if (area.get_direction()==Vector2(1,0)):
+				area.position.x=position.x-30
+			if (area.get_direction()==Vector2(-1,0)):
+				area.position.x=position.x+30
+			if (area.get_direction()==Vector2(0,1)):
+				area.position.y=position.y-30
+			if (area.get_direction()==Vector2(0,-1)):
+				area.position.y=position.y+30

@@ -2,6 +2,7 @@ extends Area2D
 
 export(PackedScene) var _scene_file=null
 export(NodePath) var _anim=null
+export var velocidad=600
 
 var scena_file_main_test=null
 
@@ -18,14 +19,15 @@ func _ready():
 	if (scena_file_main_test!=null):			#esto es para hacer la prueba de cambio de escena no la borres
 		get_tree().change_scene_to(scena_file_main_test)
 
-func _process(delta):
+func _physics_process(delta):
 	var new_pos=_speed*_direction*delta
 	set_position(get_position()+new_pos)
 	if (Input.is_action_just_pressed("ui_right") && is_move):
 		_direction=Vector2(1,0)
-		_speed=250
+		_speed=velocidad
 		is_move=false
 		set_scale(Vector2(1,0.6))
+		get_node("AudioStreamPlayer").play()
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(1,0)
 		else:
@@ -33,9 +35,10 @@ func _process(delta):
 			_speed=0
 	if (Input.is_action_just_pressed("ui_left") && is_move):
 		_direction=Vector2(-1,0)
-		_speed=250
+		_speed=velocidad
 		is_move=false
 		set_scale(Vector2(1,0.6))
+		get_node("AudioStreamPlayer").play()
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(-1,0)
 		else:
@@ -43,9 +46,10 @@ func _process(delta):
 			_speed=0
 	if (Input.is_action_just_pressed("ui_up") && is_move):
 		_direction=Vector2(0,-1)
-		_speed=250
+		_speed=velocidad
 		is_move=false
 		set_scale(Vector2(0.6,1))
+		get_node("AudioStreamPlayer").play()
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(0,-1)
 		else:
@@ -53,9 +57,10 @@ func _process(delta):
 			_speed=0
 	if (Input.is_action_just_pressed("ui_down") && is_move):
 		_direction=Vector2(0,1)
-		_speed=250
+		_speed=velocidad
 		is_move=false
 		set_scale(Vector2(0.6,1))
+		get_node("AudioStreamPlayer").play()
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(0,1)
 		else:
@@ -70,12 +75,13 @@ func _on_Area2D_area_exited(area):
 	area.is_move=false
 
 func _on_VisibleCamera_screen_exited():
-	if (get_node(_anim).is_animate==false):
-		set_position(positionIni)
-		_speed=0
-		is_move=true
-		_vectNormal=null
-		set_scale(Vector2(1,1))
+	if(_anim!=null and _scene_file!=null):
+		if (get_node(_anim).is_animate==false):
+			set_position(positionIni)
+			_speed=0
+			is_move=true
+			_vectNormal=null
+			set_scale(Vector2(1,1))
 
 func get_vectNormal():
 	return _vectNormal

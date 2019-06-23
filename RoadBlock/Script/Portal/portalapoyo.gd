@@ -23,6 +23,7 @@ func _on_PortalApoyo_area_entered(area):
 			area.set_position(get_node(_portalPuente).get_position())
 			get_node(_portalPuente).colision=true
 		colision=true
+		get_node("AudioStreamPlayer").play()
 
 func _on_PortalApoyo_area_exited(area):
 	if (_portalPuente!=null):

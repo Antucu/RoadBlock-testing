@@ -21,6 +21,7 @@ func _on_Area2D_area_entered(area):
 		area.set_speed(0)
 		area.is_move=true
 		area.set_scale(Vector2(1,1))
+		get_node("AudioStreamPlayer").play()
 
 
 func _on_Area2D_area_exited(area):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Script/Portal/portal.gd" type="Script" id=1]
 [ext_resource path="res://Assets/NuevosSprites/portal1-2.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Musica/Effects/cruzar-portal-cambia-nivel.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7.57695, 10.0544 )
@@ -33,6 +34,10 @@ polygon = PoolVector2Array( 15.8863, -16.9234, -15.7218, -17.7315, -15.7218, 17.
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -6.0
 [connection signal="area_entered" from="." to="." method="_on_Portal_area_entered"]
 [connection signal="area_entered" from="AreaCuerpo" to="." method="_on_AreaCuerpo_area_entered"]
 [connection signal="area_entered" from="Extremo" to="." method="_on_Extremo_area_entered"]

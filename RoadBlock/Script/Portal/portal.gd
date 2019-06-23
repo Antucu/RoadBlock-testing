@@ -29,11 +29,10 @@ func _on_Portal_area_entered(area):
 func _on_AreaCuerpo_area_entered(area):
 	colision=true
 	if (area.is_in_group ("ball")):
-		print ("hola ball cuerppo",_anim)
 		if (area.get_anim()!=null):
-			print ("hola ball anim")
 			var nodeAnim=get_node(area.get_anim())
 			nodeAnim.is_animate=true
+			get_node("AudioStreamPlayer").play()
 
 func _on_Extremo_area_entered(area):
 	colision=true

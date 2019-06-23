@@ -20,7 +20,7 @@ func set_speed(speed):
 	_speed=speed
 
 func get_direction():
-	return _speed
+	return _direction
 	
 func set_direction(direction):
 	_direction=direction

@@ -1,8 +1,8 @@
 extends Area2D
 
+export(NodePath) var _anim=null
+
 var _speed=0
-# warning-ignore:unused_class_variable
-var collider=false
 
 func get_speed():
 	return _speed
@@ -10,14 +10,19 @@ func get_speed():
 func set_speed(speed):
 	_speed=speed
 	
-# warning-ignore:unused_argument
-func parar(ball):
-	pass
+func get_anim():
+	return _anim
+
+func set_anim(nodeAnim):
+	_anim=nodeAnim
 
 func _on_Area2D_area_entered(area):
-	area.set_speed(0)
-	area.is_move=true
+	if (area.is_in_group ("ball") ):
+		area.set_speed(0)
+		area.is_move=true
+		area.set_scale(Vector2(1,1))
 
 
 func _on_Area2D_area_exited(area):
-	area.is_move=false
+	if (area.is_in_group ("ball") ):
+		area.is_move=false

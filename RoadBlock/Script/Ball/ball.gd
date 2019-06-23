@@ -1,9 +1,12 @@
 extends Area2D
 
 export(PackedScene) var _scene_file=null
+export(NodePath) var _anim=null
+
 var scena_file_main_test=null
 
 var _speed=0
+var sp_scale=1
 var _direction=Vector2(0,0)
 var is_move=true
 var _vectNormal=Vector2(0,0)
@@ -22,6 +25,7 @@ func _process(delta):
 		_direction=Vector2(1,0)
 		_speed=250
 		is_move=false
+		set_scale(Vector2(1,0.6))
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(1,0)
 		else:
@@ -31,6 +35,7 @@ func _process(delta):
 		_direction=Vector2(-1,0)
 		_speed=250
 		is_move=false
+		set_scale(Vector2(1,0.6))
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(-1,0)
 		else:
@@ -40,6 +45,7 @@ func _process(delta):
 		_direction=Vector2(0,-1)
 		_speed=250
 		is_move=false
+		set_scale(Vector2(0.6,1))
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(0,-1)
 		else:
@@ -49,6 +55,7 @@ func _process(delta):
 		_direction=Vector2(0,1)
 		_speed=250
 		is_move=false
+		set_scale(Vector2(0.6,1))
 		if (_vectNormal!=_direction):
 			_vectNormal=Vector2(0,1)
 		else:
@@ -92,3 +99,9 @@ func get_scene_file():
 	
 func set_scene_file(scena):
 	_scene_file=scena
+
+func get_anim():
+	return _anim
+
+func set_anim(nodeAnim):
+	_anim=nodeAnim

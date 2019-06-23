@@ -6,7 +6,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 3.38451, 3.20891 )
 
-[node name="PortalApoyo" type="Area2D"]
+[node name="PortalApoyo" type="Area2D" groups=[
+"animated",
+]]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

@@ -79,3 +79,16 @@ func test_ball_retry_postion_move():		#Verifico si salio de la camara
 	assert_eq(ball.get_vectNormal(),null)
 	
 	remove_child(ball)
+
+func test_ball_anim_move():
+	var ball= BallObj.instance()
+	add_child(ball)
+	
+	ball.set_position(Vector2(150,200))
+	ball.set_speed(150)
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.get_scale(),Vector2(1,0.6))
+	
+	remove_child(ball)

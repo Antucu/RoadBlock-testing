@@ -6,7 +6,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15.2964, 1.75182 )
 
-[node name="Flecha" type="Area2D"]
+[node name="Flecha" type="Area2D" groups=[
+"animated",
+]]
+position = Vector2( 215, 293 )
 script = ExtResource( 1 )
 _directionFlecha = 2
 

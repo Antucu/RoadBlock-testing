@@ -55,4 +55,19 @@ func test_controlar_collider_pared_detener():	#test para detener el avance de la
 	
 	assert_eq(ball.get_speed(),0)
 
+func test_ball_anim_parar():
+	var ball= BallObj.instance()
+	add_child(ball)
+	ball.set_position(Vector2(150,200))
+	ball.set_speed(150)
+	
+	var wall=WallObj.instance()
+	ball.set_position(Vector2(300,200))
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.get_scale(),Vector2(1,1))
+	
+	remove_child(ball)
+
 

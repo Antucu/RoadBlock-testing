@@ -18,7 +18,6 @@ func test_colision_puas_ball():		#Verificar la colision y si la pelota se puso e
 	add_child(pObj)
 	pObj.set_position(Vector2(150,100))
 	
-	
 	var bObj=BallObj.instance()
 	add_child(bObj)
 	bObj.set_position(Vector2(150,300))
@@ -34,7 +33,6 @@ func test_colision_puas_ball_is_move():		#Verifcar que la ball se mueva cuando h
 	var pObj= PuasObj.instance()
 	add_child(pObj)
 	pObj.set_position(Vector2(150,100))
-	
 	
 	var bObj=BallObj.instance()
 	add_child(bObj)

@@ -6,6 +6,8 @@ var BallObj=load('res://Perphaps/Ball/ball.tscn')	#Creo el objeto Ball
 
 func test_can_portal_class():				#Esto es para ver si se creo el objeto
 	var b= Ball.new()
+	var curretn =get_tree().get_current_scene()
+	b.set_scene_file(curretn)
 	assert_not_null(b)
 
 func test_can_portal_perphaps():				#Esto es para ver si se creo el objeto
@@ -75,5 +77,18 @@ func test_ball_retry_postion_move():		#Verifico si salio de la camara
 	
 	assert_eq(ball.is_move,true)
 	assert_eq(ball.get_vectNormal(),null)
+	
+	remove_child(ball)
+
+func test_ball_anim_move():
+	var ball= BallObj.instance()
+	add_child(ball)
+	
+	ball.set_position(Vector2(150,200))
+	ball.set_speed(150)
+	
+	yield(yield_for(5),YIELD)
+	
+	assert_eq(ball.get_scale(),Vector2(1,0.6))
 	
 	remove_child(ball)

@@ -19,3 +19,6 @@ func _physics_process(delta):
 func _on_Timer_timeout():
 	is_timre=false
 	is_animate=false
+	var objectElim=get_tree().get_nodes_in_group("animated")
+	for i in objectElim:
+		i.queue_free()

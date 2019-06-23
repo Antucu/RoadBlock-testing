@@ -5,6 +5,9 @@ var colision=false
 export(PackedScene) var _scena_file=null
 export(NodePath) var _anim=null
 
+func _ready():
+	print (_anim)
+
 func get_scena_file():
 	return _scena_file
 	
@@ -26,7 +29,9 @@ func _on_Portal_area_entered(area):
 func _on_AreaCuerpo_area_entered(area):
 	colision=true
 	if (area.is_in_group ("ball")):
+		print ("hola ball cuerppo",_anim)
 		if (area.get_anim()!=null):
+			print ("hola ball anim")
 			var nodeAnim=get_node(area.get_anim())
 			nodeAnim.is_animate=true
 

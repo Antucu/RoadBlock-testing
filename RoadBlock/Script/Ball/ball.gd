@@ -15,14 +15,16 @@ var _vectNormal=Vector2(0,0)
 var positionIni
 	
 func _ready():
-	positionIni=get_position()
+	positionIni=global_position
 	if (scena_file_main_test!=null):			#esto es para hacer la prueba de cambio de escena no la borres
 		get_tree().change_scene_to(scena_file_main_test)
 
 func _physics_process(delta):
 	var new_pos=_speed*_direction*delta
 	set_position(get_position()+new_pos)
-	if (Input.is_action_just_pressed("ui_right") && is_move):
+	Input.is_action_just_released("ui_right")
+	
+	if (Input.is_action_pressed("ui_right") && is_move):
 		_direction=Vector2(1,0)
 		_speed=velocidad
 		is_move=false
@@ -79,13 +81,14 @@ func _on_Area2D_area_exited(area):
 	area.is_move=false
 
 func _on_VisibleCamera_screen_exited():
-	if(_anim!=null and _scene_file!=null):
+	if(_anim!=null or _scene_file!=null):
 		if (get_node(_anim).is_animate==false):
 			set_position(positionIni)
 			_speed=0
 			is_move=true
 			_vectNormal=null
 			set_scale(Vector2(1,1))
+
 
 func get_vectNormal():
 	return _vectNormal

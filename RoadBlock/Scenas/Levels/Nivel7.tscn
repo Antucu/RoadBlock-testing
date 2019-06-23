@@ -5,7 +5,6 @@
 [ext_resource path="res://Assets/Musica/Soundtracks/level7.ogg" type="AudioStream" id=3]
 
 [node name="Nivel7" type="Node2D"]
-editor/display_folded = true
 __meta__ = {
 "_edit_horizontal_guides_": [ 31.9916, 160.086, 255.947, 320.007, 351.852, 384.029, 512.001, 543.97, 416.019, 447.987, 575.99, 192.013 ],
 "_edit_vertical_guides_": [ 128.099, 160.355, 63.9492, 608.04, 512.036, 863.99, 831.986, 800.096, 416.074, 224.025 ]

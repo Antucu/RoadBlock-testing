@@ -3,6 +3,7 @@ extends Node
 var is_animate=false
 var is_timre=false
 var t=0
+export(PackedScene) var scene_file=null
 
 func _physics_process(delta):
 	if (is_animate==true):
@@ -22,3 +23,4 @@ func _on_Timer_timeout():
 	var objectElim=get_tree().get_nodes_in_group("animated")
 	for i in objectElim:
 		i.queue_free()
+	get_tree().change_scene_to(scene_file)

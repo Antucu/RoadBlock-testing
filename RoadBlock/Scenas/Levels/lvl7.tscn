@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/tilemapRoadBlock.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=2]
@@ -7,8 +7,9 @@
 [ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Perphaps/Portal/PortalApoyo.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenas/Levels/lvl8.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=10]
 
 [node name="lvl7" type="Node2D"]
 __meta__ = {
@@ -144,14 +145,17 @@ rotation = 1.5708
 
 [node name="PortalApoyo" parent="." instance=ExtResource( 6 )]
 position = Vector2( 400.446, 175.373 )
+_portalPuente = NodePath("../PortalApoyo2")
 
 [node name="PortalApoyo2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 624.128, 368.173 )
+_portalPuente = NodePath("../PortalApoyo")
 
 [node name="Animaciones" parent="." instance=ExtResource( 7 )]
+scene_file = ExtResource( 8 )
 
-[node name="Ball" parent="." instance=ExtResource( 8 )]
+[node name="Ball" parent="." instance=ExtResource( 9 )]
 position = Vector2( 369.008, 207.806 )
 _anim = NodePath("../Animaciones")
 
-[node name="Node" parent="." instance=ExtResource( 9 )]
+[node name="Node" parent="." instance=ExtResource( 10 )]

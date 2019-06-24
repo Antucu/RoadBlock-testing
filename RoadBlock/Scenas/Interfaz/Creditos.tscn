@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
+[ext_resource path="res://Script/Interfaces/Control.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Sprites/Interfac grafica/button.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Musica/Soundtracks/musica menu del juego.ogg" type="AudioStream" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 465.537, 263.986 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 224.587
+margin_top = 71.559
+margin_right = 435.587
+margin_bottom = 306.559
+rect_scale = Vector2( 3, 1.76 )
+text = "Creditos
+
+Programadores
+	- Anthony Jhon Apaza Chambi
+
+Tester
+	- Anthony Jhon Apaza Chambi
+
+Diseñadores
+	- Victor Manuel Benavente Yepez
+	- Edehilton Nina Hurtado
+	
+Música
+	- Victor Manuel Benavente Yepez"
+
+[node name="Control" type="Control" parent="."]
+editor/display_folded = true
+margin_left = 800.793
+margin_top = 535.477
+margin_right = 840.793
+margin_bottom = 575.477
+
+[node name="Container" type="Container" parent="Control"]
+margin_right = 256.0
+margin_bottom = 68.0
+script = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="Control/Container"]
+margin_right = 200.0
+margin_bottom = 40.0
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Label" type="Label" parent="Control/Container/TextureButton"]
+margin_left = 68.948
+margin_top = 12.6639
+margin_right = 129.948
+margin_bottom = 26.6639
+text = "Continuar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -17.0
+autoplay = true
+[connection signal="pressed" from="Control/Container/TextureButton" to="Control/Container" method="_on_TextureButton_pressed"]

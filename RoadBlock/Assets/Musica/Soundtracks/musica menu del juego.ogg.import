@@ -11,5 +11,5 @@ dest_files=[ "res://.import/musica menu del juego.ogg-f0ca38133dc2f1a0151a15fcae
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

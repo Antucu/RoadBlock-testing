@@ -22,9 +22,8 @@ func _ready():
 func _physics_process(delta):
 	var new_pos=_speed*_direction*delta
 	set_position(get_position()+new_pos)
-	Input.is_action_just_released("ui_right")
 	
-	if (Input.is_action_pressed("ui_right") && is_move):
+	if (Input.is_action_just_pressed("ui_right") && is_move):
 		_direction=Vector2(1,0)
 		_speed=velocidad
 		is_move=false

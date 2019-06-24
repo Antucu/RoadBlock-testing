@@ -6,6 +6,7 @@ var _speed=0
 var vecNormalIn=null
 var vecNormalOut=null
 var is_colission=false
+var objArea=null
 
 func get_speed():
 	return _speed
@@ -18,10 +19,30 @@ func get_anim():
 
 func set_anim(nodeAnim):
 	_anim=nodeAnim
+	
+func _physics_process(delta):
+	for obj in get_overlapping_areas():
+		if (obj.is_in_group("ball") and vecNormalIn==null):
+			print ("Entro a la colisoin co vect in null")
+			if (vecNormalOut==Vector2(1,0)):
+				obj.position.x=position.x-31
+			if (vecNormalOut==Vector2(-1,0)):
+				obj.position.x=position.x+31
+			if (vecNormalOut==Vector2(0,1)):
+				obj.position.y=position.y-31
+			if (vecNormalOut==Vector2(0,-1)):
+				obj.position.y=position.y+31
+			obj.set_scale(Vector2(1,1))
+			obj.is_move=true
+			
+		if (obj.is_in_group("ball") and vecNormalIn!=null):
+			if (obj.is_move==false):
+				obj.is_move=true
 
 func _on_Area2D_area_entered(area):
 	if (area.is_in_group ("ball") ):
 		if (vecNormalIn==null or area.get_vectNormal()==vecNormalIn):
+			objArea=area
 			area.set_speed(0)
 			area.is_move=true
 			area.set_scale(Vector2(1,1))
@@ -36,18 +57,14 @@ func _on_Area2D_area_entered(area):
 			if (vecNormalIn==Vector2(0,-1)):
 				area.position.y=position.y+30
 			get_node("AudioStreamPlayer").play()
-			
-			vecNormalIn=area.get_vectNormal()
-			vecNormalOut=area.get_vectNormal()
 		else:
 			vecNormalIn=null
-			#is_colission=true
+			area.is_move=true
 
 func _on_Area2D_area_exited(area):
 	if (area.is_in_group ("ball") ):
 		if (vecNormalOut!=area.get_vectNormal()):
 			area.is_move=false
-			
 			if(get_node("Timer").is_stopped()):
 				get_node("Timer").start()
 		else:
@@ -62,7 +79,5 @@ func _on_Area2D_area_exited(area):
 
 func _on_Timer_timeout():
 	vecNormalIn=null
-	pass
-	#is_colission=true
-	#vecNormalOut=null
+	
 	

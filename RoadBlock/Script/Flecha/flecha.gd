@@ -17,15 +17,6 @@ func _ready():
 	if (_directionFlecha==3):
 		directionBall=Vector2(-1,0)
 		
-func _physics_process(delta):
-	#print (delta)
-	#position.x=position.x+300*delta
-	#position.y=position.y+0.5*t*t*delta
-	#t=t+0.3
-	#rotate(4*delta)
-	pass
-	
-
 func set_directionFlecha(direcion):
 	_directionFlecha=direcion
 	
@@ -55,6 +46,7 @@ func _on_Flecha_area_entered(area):
 			colision=true
 		else:
 			area.set_speed(0)
+			area.set_scale(Vector2(1,1))
 			area.is_move=true
 
 	

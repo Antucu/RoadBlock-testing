@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
+[ext_resource path="res://Perphaps/Portal/PortalApoyo.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenas/Levels/lvl6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Musica/Soundtracks/level5.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=8]
+
+[node name="lvl5" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ 589.33, 554.69, 398.81, 364.17 ]
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 727, 220 )
+scale = Vector2( 1.02486, 1.09491 )
+texture = ExtResource( 1 )
+offset = Vector2( -250.714, 105.403 )
+
+[node name="PortalApoyo" parent="." instance=ExtResource( 2 )]
+position = Vector2( 572.35, 159.143 )
+_portalPuente = NodePath("../PortalApoyo2")
+
+[node name="PortalApoyo2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 380.914, 310.763 )
+_portalPuente = NodePath("../PortalApoyo")
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 571.894, 400.165 )
+rotation = -1.5708
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 381.263, 109.794 )
+_anim = NodePath("../Animaciones")
+
+[node name="Animaciones" parent="." instance=ExtResource( 5 )]
+scene_file = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -17.0
+autoplay = true
+
+[node name="Node" parent="." instance=ExtResource( 8 )]

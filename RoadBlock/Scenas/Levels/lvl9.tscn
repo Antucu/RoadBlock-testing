@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
+[ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Perphaps/Wall/ladrilloCajon.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenas/Levels/lvl10.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Musica/Soundtracks/level9.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Perphaps/Fecha/flecha.tscn" type="PackedScene" id=9]
+
+[node name="lvl9" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ 623.747, 607.799 ]
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 727, 220 )
+scale = Vector2( 1.02486, 1.09491 )
+texture = ExtResource( 1 )
+offset = Vector2( -250.714, 105.403 )
+
+[node name="Portal" parent="." instance=ExtResource( 2 )]
+position = Vector2( 515.47, 247.014 )
+rotation = 1.55362
+
+[node name="Ladrillo2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 674.118, 380.025 )
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 337.171, 372.768 )
+_anim = NodePath("../../lvl9/Animaciones")
+
+[node name="Animaciones" parent="." instance=ExtResource( 5 )]
+scene_file = ExtResource( 6 )
+
+[node name="Node" parent="." instance=ExtResource( 7 )]
+editor/display_folded = true
+
+[node name="Control" parent="Node" index="0"]
+editor/display_folded = true
+margin_left = 1.04283
+margin_top = 0.875015
+margin_right = 1.04285
+margin_bottom = 0.874939
+
+[node name="botones" parent="Node/Control" index="2"]
+editor/display_folded = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -17.0
+autoplay = true
+
+[node name="Flecha" parent="." instance=ExtResource( 9 )]
+position = Vector2( 487.723, 378.713 )
+
+[editable path="Node"]

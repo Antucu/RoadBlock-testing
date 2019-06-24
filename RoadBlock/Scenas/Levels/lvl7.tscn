@@ -1,0 +1,161 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/tilemapRoadBlock.tres" type="TileSet" id=1]
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Musica/Soundtracks/level8.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Perphaps/Wall/ladrilloCajon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Perphaps/Portal/PortalApoyo.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenas/Levels/lvl8.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=10]
+
+[node name="lvl7" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 159.256, 192.076, 352.256, 384.256, 255.674, 447.809, 479.562, 96.1772, 224.033, 415.935 ],
+"_edit_vertical_guides_": [ 544.077, 512.2, 192.03, 160.379, 768.729, 800.172, 864.174, 608.313, 640.246, 320.689, 896.466, 384.441 ]
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+visible = false
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131072, 4, 0, -131041, 5, 0, 65535, 3, 0, 5, 3, 0, 11, 3, 0, 17, 3, 0, 23, 3, 0, 29, 3, 0, 131077, 11, 0, 131088, 8, 0, 131096, 11, 0, 196613, 11, 0, 196634, 11, 0, 262144, 4, 0, 262149, 11, 0, 262158, 11, 0, 262175, 5, 0, 327689, 11, 0, 327692, 10, 0, 327704, 11, 0, 327705, 11, 0, 327706, 11, 0, 393220, 11, 0, 393236, 11, 0, 458769, 11, 0, 458772, 11, 0, 458780, 11, 0, 524292, 11, 0, 524305, 11, 0, 524306, 11, 0, 524311, 11, 0, 589830, 11, 0, 589847, 11, 0, 655360, 4, 0, 655366, 11, 0, 655382, 11, 0, 655383, 11, 0, 655387, 11, 0, 655391, 5, 0, 720902, 11, 0, 720903, 11, 0, 720915, 10, 0, 786444, 11, 0, 851973, 11, 0, 917515, 11, 0, 917520, 11, 0, 983048, 11, 0, 983049, 11, 0, 983056, 11, 0, 1048576, 4, 0, 1048607, 5, 0, 1245183, 2, 0, 1179653, 2, 0, 1179659, 2, 0, 1179665, 2, 0, 1179671, 2, 0, 1179677, 2, 0 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 520.514, 353.069 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+autoplay = true
+
+[node name="Ladrillo2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 303.242, 175.879 )
+
+[node name="Ladrillo29" parent="." instance=ExtResource( 4 )]
+position = Vector2( 463.191, 143.889 )
+
+[node name="Ladrillo30" parent="." instance=ExtResource( 4 )]
+position = Vector2( 143.293, 208.613 )
+
+[node name="Ladrillo31" parent="." instance=ExtResource( 4 )]
+position = Vector2( 144.037, 271.825 )
+
+[node name="Ladrillo32" parent="." instance=ExtResource( 4 )]
+position = Vector2( 239.76, 367.836 )
+
+[node name="Ladrillo33" parent="." instance=ExtResource( 4 )]
+position = Vector2( 175.502, 431.996 )
+
+[node name="Ladrillo34" parent="." instance=ExtResource( 4 )]
+position = Vector2( 367.718, 463.871 )
+
+[node name="Ladrillo35" parent="." instance=ExtResource( 4 )]
+position = Vector2( 399.391, 399.656 )
+
+[node name="Ladrillo3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 784.322, 175.879 )
+
+[node name="Ladrillo6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 751.942, 336.079 )
+
+[node name="Ladrillo17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 207.663, 367.731 )
+
+[node name="Ladrillo20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 176.011, 142.726 )
+
+[node name="Ladrillo8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 751.942, 304.059 )
+
+[node name="Ladrillo16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 207.663, 335.711 )
+
+[node name="Ladrillo19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 176.011, 110.706 )
+
+[node name="Ladrillo11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 655.778, 240.138 )
+
+[node name="Ladrillo22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 527.587, 495.806 )
+
+[node name="Ladrillo13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 560.038, 272.012 )
+
+[node name="Ladrillo23" parent="." instance=ExtResource( 4 )]
+position = Vector2( 272.268, 495.707 )
+
+[node name="Ladrillo9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 751.942, 271.959 )
+
+[node name="Ladrillo15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 207.663, 303.611 )
+
+[node name="Ladrillo18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 176.011, 78.6057 )
+
+[node name="Ladrillo10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 655.778, 208.038 )
+
+[node name="Ladrillo21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 527.587, 463.706 )
+
+[node name="Ladrillo12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 560.038, 239.912 )
+
+[node name="Ladrillo14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 591.189, 272.137 )
+
+[node name="Ladrillo24" parent="." instance=ExtResource( 4 )]
+position = Vector2( 303.419, 495.832 )
+
+[node name="Ladrillo4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 816.622, 175.879 )
+
+[node name="Ladrillo7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 719.742, 336.079 )
+
+[node name="Ladrillo5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 847.642, 175.879 )
+
+[node name="Ladrillo25" parent="." instance=ExtResource( 4 )]
+position = Vector2( 879.963, 336.029 )
+
+[node name="Ladrillo26" parent="." instance=ExtResource( 4 )]
+position = Vector2( 911.92, 239.794 )
+
+[node name="Ladrillo27" parent="." instance=ExtResource( 4 )]
+position = Vector2( 847.279, 111.964 )
+
+[node name="Ladrillo28" parent="." instance=ExtResource( 4 )]
+position = Vector2( 752.785, 79.6172 )
+
+[node name="Portal" parent="." instance=ExtResource( 5 )]
+position = Vector2( 529.511, 79.7978 )
+rotation = 1.5708
+
+[node name="PortalApoyo" parent="." instance=ExtResource( 6 )]
+position = Vector2( 400.446, 175.373 )
+_portalPuente = NodePath("../PortalApoyo2")
+
+[node name="PortalApoyo2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 624.128, 368.173 )
+_portalPuente = NodePath("../PortalApoyo")
+
+[node name="Animaciones" parent="." instance=ExtResource( 7 )]
+scene_file = ExtResource( 8 )
+
+[node name="Ball" parent="." instance=ExtResource( 9 )]
+position = Vector2( 369.008, 207.806 )
+_anim = NodePath("../Animaciones")
+
+[node name="Node" parent="." instance=ExtResource( 10 )]

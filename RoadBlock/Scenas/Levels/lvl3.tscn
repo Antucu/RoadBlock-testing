@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Sprites/fondo.png" type="Texture" id=1]
+[ext_resource path="res://Perphaps/Wall/wall.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Perphaps/Portal/Portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Perphaps/Ball/ball.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Perphaps/Animaciones/Animaciones.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenas/Levels/lvl4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Musica/Soundtracks/level3.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Perphaps/Menu_Pausa/Boton_pausa.tscn" type="PackedScene" id=8]
+
+[node name="lvl3" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 176.078, 340.259, 275.557 ],
+"_edit_vertical_guides_": [ 329.147, 438.821, 294.883, 635.535, 478.779 ]
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 727, 220 )
+scale = Vector2( 1.02486, 1.09491 )
+texture = ExtResource( 1 )
+offset = Vector2( -250.714, 105.403 )
+
+[node name="Ladrillo1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 311.205, 465.011 )
+
+[node name="Ladrillo2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 311.205, 433.097 )
+
+[node name="Ladrillo3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.091, 356.381 )
+
+[node name="Ladrillo14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 621.074, 356.256 )
+
+[node name="Ladrillo4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.091, 323.605 )
+
+[node name="Ladrillo12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.994, 323.906 )
+
+[node name="Ladrillo5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.397, 291.46 )
+
+[node name="Ladrillo11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.994, 291.76 )
+
+[node name="Ladrillo6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 277.703, 259.314 )
+
+[node name="Ladrillo15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 652.994, 259.614 )
+
+[node name="Ladrillo7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 309.623, 259.62 )
+
+[node name="Ladrillo13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 653.18, 355.83 )
+
+[node name="Ladrillo8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 421.419, 258.157 )
+
+[node name="Ladrillo16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 618.346, 159.735 )
+
+[node name="Ladrillo9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 421.419, 226.106 )
+
+[node name="Ladrillo18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 650.906, 159.735 )
+
+[node name="Ladrillo10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 421.419, 194.581 )
+
+[node name="Ladrillo17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 586.231, 159.735 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 454.788, 98.124 )
+rotation = 1.5708
+
+[node name="Ball" parent="." instance=ExtResource( 4 )]
+position = Vector2( 501.844, 322.36 )
+_anim = NodePath("../Animaciones")
+
+[node name="Animaciones" parent="." instance=ExtResource( 5 )]
+scene_file = ExtResource( 6 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -17.0
+autoplay = true
+
+[node name="Node" parent="." instance=ExtResource( 8 )]

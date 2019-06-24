@@ -1,8 +1,11 @@
 extends Area2D
 
-var colision=false
+export(NodePath) var _anim=null
 export(int, "Arriba", "Abajo", "Derecha","Izquieda") var _directionFlecha
-var directionBall
+
+var directionBall=Vector2()
+var colision=false
+var t=0
 
 func _ready():
 	if (_directionFlecha==0):
@@ -13,25 +16,37 @@ func _ready():
 		directionBall=Vector2(1,0)
 	if (_directionFlecha==3):
 		directionBall=Vector2(-1,0)
-
+		
 func set_directionFlecha(direcion):
 	_directionFlecha=direcion
 	
 func get_directionFlecha():
 	return _directionFlecha
+
+func get_anim():
+	return _anim
+
+func set_anim(nodeAnim):
+	_anim=nodeAnim
+	
 func _on_Flecha_area_entered(area):
-	if (colision==false):
-		if (_directionFlecha==0):
-			directionBall=Vector2(0,1)
-		if (_directionFlecha==1):
-			directionBall=Vector2(0,-1)
-		if (_directionFlecha==2):
-			directionBall=Vector2(1,0)
-		if (_directionFlecha==3):
-			directionBall=Vector2(-1,0)
-		area.set_direction(directionBall)
-		colision=true
-	else:
-		area.set_speed(0)
-		area.is_move=true
+	if (area.is_in_group ("ball") ):
+		var auxNormal=-1*area.get_direction()
+		if (colision==false or auxNormal!=directionBall):
+			if (_directionFlecha==0):
+				directionBall=Vector2(0,1)
+			if (_directionFlecha==1):
+				directionBall=Vector2(0,-1)
+			if (_directionFlecha==2):
+				directionBall=Vector2(1,0)
+			if (_directionFlecha==3):
+				directionBall=Vector2(-1,0)
+			area.set_direction(directionBall)
+			area.set_vectNormal(directionBall)
+			colision=true
+		else:
+			area.set_speed(0)
+			area.set_scale(Vector2(1,1))
+			area.is_move=true
+
 	

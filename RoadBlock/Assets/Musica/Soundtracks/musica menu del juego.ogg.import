@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/musica menu del juego.ogg-f0ca38133dc2f1a0151a15fcaeccefbf.oggstr"
+
+[deps]
+
+source_file="res://Assets/Musica/Soundtracks/musica menu del juego.ogg"
+dest_files=[ "res://.import/musica menu del juego.ogg-f0ca38133dc2f1a0151a15fcaeccefbf.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

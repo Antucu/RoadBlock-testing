@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mover-pelota.ogg-64e6e75de9feea46057564e19fc0bb98.oggstr"
+
+[deps]
+
+source_file="res://Assets/Musica/Effects/mover-pelota.ogg"
+dest_files=[ "res://.import/mover-pelota.ogg-64e6e75de9feea46057564e19fc0bb98.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
